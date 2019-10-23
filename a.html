@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var lengthOfLongestSubstring = function(s) {
+
+// var len = s.length;
+var len = 6;
+
+var arr = [];
+var index = 0;
+
+for (var i=0; i<len; i++){
+    if(arr.indexOf(s.charAt(i)) < 0){
+        arr.push(s.charAt(i));
+    }else{
+        if(index < (arr.length)){
+            index = arr.length;
+            // console.log(arr);
+            // console.log(11111111);
+            arr = [];
+        }
+    }
+}
+
+return arr.length;
+};
+
+console.log(lengthOfLongestSubstring("pwwkew"));
+        
+    </script>
+</body>
+</html>
