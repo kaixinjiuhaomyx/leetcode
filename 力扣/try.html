@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lengthOfLongestSubstring = function(s) {
+        let ans = 0
+        let line = []
+        s.split('').forEach((item, index) => {
+            if (line.indexOf(item) !== -1) {   // item存在与line中
+                line.splice(line.indexOf(item), line.length); // 将顺序调换
+            }
+            line.unshift(item)  // item添加到line
+            console.log(line);
+
+            ans = Math.max(ans, line.length)
+        })
+        return ans
+    };
+    console.log(lengthOfLongestSubstring("pwwkew"));
+
+    </script>
+</body>
+</html>
