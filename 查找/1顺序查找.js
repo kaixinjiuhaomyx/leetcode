@@ -6,10 +6,10 @@
 // @param {查找的关键值} value 
 
 function SequenceSearch(arr, value){
-  for(let i = 0; i < arr.length; i++){
-      if (arr[i] == value){
-          return i;
-      }
-  }
-  return  -1;
+    for(let i = 0; i < arr.length; i++){
+        if (arr[i] == value){
+            return i;
+        }
+    }
+    return  -1;
 }
