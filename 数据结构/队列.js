@@ -1,3 +1,4 @@
+
 function Queue(){
         this.dataStore = []; // 利用数组实现队列
         this.enQueue = enQueue; // 入队
